@@ -7,7 +7,7 @@
 利用以上技术搭建一个vue案例
 
 ###  项目结构展示
-
+![项目结构图](https://github.com/zhangmhui/vue-Element/blob/master/vue-element/static/githubImg/discribe.png "项目结构图")
 ###  运行方式
 
 下载文件后解压
