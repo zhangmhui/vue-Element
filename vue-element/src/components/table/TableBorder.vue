@@ -20,8 +20,9 @@
         <el-button type="primary" @click="onSubmit">查询</el-button>
       </el-form-item>
     </el-form>
-    <center>基础表格</center>
-    <el-table :data="tableData" style="width: 100%">
+    <center>带边框、斑马纹表格</center>
+    <el-table :data="tableData" border stripe style="width: 100%">
+      <!-- border:边框 ; stripe:斑马纹-->
       <el-table-column prop="date" label="日期" width="180">
       </el-table-column>
       <el-table-column prop="name" label="姓名" width="180">

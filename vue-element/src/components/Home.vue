@@ -25,8 +25,8 @@
               <el-menu-item index="1-1">选项1</el-menu-item>
               <el-menu-item index="1-2">选项2</el-menu-item>
             </el-menu-item-group>
-            <el-menu-item-group title="分组2">
-              <el-menu-item index="1-3">选项3</el-menu-item>
+            <el-menu-item-group title="常用插件">
+              <el-menu-item index="1-3">树形穿梭选择框</el-menu-item>
             </el-menu-item-group>
             <el-submenu index="1-4">
               <span slot="title">选项4</span>
@@ -43,17 +43,27 @@
               <span slot="title">table</span>
             </template>
             <el-menu-item-group>
+              <el-submenu index="3-1">
               <span slot="title">基础表格</span>
-              <el-menu-item index="3-1">选项1</el-menu-item>
-              <el-menu-item index="3-2">选项2</el-menu-item>
+              <el-menu-item index="3-1-1">基础表格</el-menu-item>
+              <el-menu-item index="3-1-2">带边框</el-menu-item>
+              <el-menu-item index="3-1-2">带边框</el-menu-item>
+            </el-submenu>
+              <span slot="title">基础表格</span>
+              <el-menu-item index="3-1">基础表格</el-menu-item>
+              <el-menu-item index="3-2">带边框</el-menu-item>
+              <el-menu-item index="3-3">带状态</el-menu-item>
             </el-menu-item-group>
             <el-menu-item-group title="功能表格">
-              <el-menu-item index="3-3">选项3</el-menu-item>
+              <el-menu-item index="3-3">多级表头</el-menu-item>
             </el-menu-item-group>
             <el-submenu index="3-4">
-              <span slot="title">选项4</span>
-              <el-menu-item index="3-4-1">选项1</el-menu-item>
+              <span slot="title">固定宽高</span>
+              <el-menu-item index="3-4-1">固定高度</el-menu-item>
+              <el-menu-item index="3-4-2">固定宽度</el-menu-item>
             </el-submenu>
+            <el-menu-item index="3-5">多级表头</el-menu-item>
+            <el-menu-item index="3-6">多级表头</el-menu-item>
           </el-submenu>
           <el-menu-item index="4">
             <i class="el-icon-setting"></i>
@@ -86,18 +96,32 @@ export default {
     },
     handleSelect(key, keyPath) {
       console.log(key, keyPath);
-      if (key == 1) {
-        this.$router.push('/chart')
-      } else
-        if (key == 2) {
+      switch (key) {
+        case 1:
           this.$router.push('/chart')
-        } else
-          if (key == '3-1') {
-            this.$router.push('/table')
-          } else
-            if (key == 4) {
-              this.$router.push('/form')
-            }
+          break;
+        case 1-3:
+          this.$router.push('/transfer')
+          break;
+        case 2:
+          this.$router.push('/chart')
+          break;
+        case '3-1':
+          this.$router.push('/table')
+          break;
+        case '3-2':
+          this.$router.push('/tableBorder')
+          break;
+        case '3-3':
+          this.$router.push('/tableState')
+          break;
+        case 4:
+          this.$router.push('/form')
+          break;
+        default:
+          
+      }
+      
     }
   }
 }
