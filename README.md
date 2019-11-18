@@ -8,6 +8,12 @@
 
 ###  项目结构展示
 ![项目结构图](https://github.com/zhangmhui/vue-Element/blob/master/vue-element/static/githubImg/discribe.png "项目结构图")
+
+###  功能结构
+####  树状穿梭框
+在element穿梭框el-transfer的基础上，使用插件el-tree-transfer实现树状结构的穿梭功能
+####  表格
+基于element实现各种表格效果
 ###  运行方式
 
 下载文件后解压
