@@ -6,8 +6,12 @@ import Chart from '@/components/chart/Chart'
 import Table from '@/components/table/Table'
 import TableBorder from '@/components/table/TableBorder'
 import TableState from '@/components/table/tablestate'
+import SpanMethod from '@/components/table/SpanMethod'
+import SelectSingle from '@/components/table/SelectSingle'
+import SelectMore from '@/components/table/SelectMore'
+import OrderBy from '@/components/table/OrderBy'
+import MoreTitle from '@/components/table/MoreTitle'
 
-import StanderWidth from '@/components/table/StanderWidth'
 import StanderHeight from '@/components/table/StanderHeight'
 import Transfer from '@/components/tansfer/Transfer'
 
@@ -48,9 +52,9 @@ export default new Router({
           component: StanderHeight,
         },
         {
-          path: '/standerwidth',
-          name: 'StanderWidth',
-          component: StanderWidth,
+          path: '/moretitle',
+          name: 'MoreTitle',
+          component: MoreTitle,
         },
         {
           path: '/form',
@@ -63,9 +67,24 @@ export default new Router({
           component: Transfer,
         },
         {
-          path: '/transfer',
-          name: 'Transfer',
-          component: Transfer,
+          path: '/spanmethod',
+          name: 'SpanMethod',
+          component: SpanMethod,
+        },
+        {
+          path: '/selectsingle',
+          name: 'SelectSingle',
+          component: SelectSingle,
+        },
+        {
+          path: '/selectmore',
+          name: 'SelectMore',
+          component: SelectMore,
+        },
+        {
+          path: '/orderby',
+          name: 'OrderBy',
+          component: OrderBy,
         },
       ]
     }

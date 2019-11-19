@@ -42,26 +42,18 @@
               <i class="el-icon-location"></i>
               <span slot="title">table</span>
             </template>
-            <el-menu-item-group>
-              <el-submenu index="3-1">
-              <span slot="title">基础表格</span>
+            <el-menu-item-group title="基础表格">
               <el-menu-item index="3-1-1">基础表格</el-menu-item>
               <el-menu-item index="3-1-2">带边框</el-menu-item>
-              <el-menu-item index="3-1-2">带边框</el-menu-item>
-            </el-submenu>
-              <span slot="title">基础表格</span>
-              <el-menu-item index="3-1">基础表格</el-menu-item>
-              <el-menu-item index="3-2">带边框</el-menu-item>
-              <el-menu-item index="3-3">带状态</el-menu-item>
+              <el-menu-item index="3-1-3">带状态</el-menu-item>
+              <el-menu-item index="3-1-4">多级表头</el-menu-item>
+              <el-menu-item index="3-1-5">固定高度</el-menu-item>
             </el-menu-item-group>
             <el-menu-item-group title="功能表格">
-              <el-menu-item index="3-3">多级表头</el-menu-item>
+              <el-menu-item index="3-3-1">排序</el-menu-item>
+              <el-menu-item index="3-3-2">单选</el-menu-item>
+              <el-menu-item index="3-3-3">多选</el-menu-item>
             </el-menu-item-group>
-            <el-submenu index="3-4">
-              <span slot="title">固定宽高</span>
-              <el-menu-item index="3-4-1">固定高度</el-menu-item>
-              <el-menu-item index="3-4-2">固定宽度</el-menu-item>
-            </el-submenu>
             <el-menu-item index="3-5">多级表头</el-menu-item>
             <el-menu-item index="3-6">多级表头</el-menu-item>
           </el-submenu>
@@ -100,28 +92,40 @@ export default {
         case 1:
           this.$router.push('/chart')
           break;
-        case 1-3:
+        case 1 - 3:
           this.$router.push('/transfer')
           break;
         case 2:
           this.$router.push('/chart')
           break;
-        case '3-1':
+        case '3-1-1':
           this.$router.push('/table')
           break;
-        case '3-2':
+        case '3-1-2':
           this.$router.push('/tableBorder')
           break;
-        case '3-3':
+        case '3-1-3':
           this.$router.push('/tableState')
+          break;
+        case '3-1-4':
+          this.$router.push('/moretitle')
+          break;
+        case '3-3-1':
+          this.$router.push('/spanmethod')
+          break;
+        case '3-3-2':
+          this.$router.push('/selectsingle')
+          break;
+        case '3-3-3':
+          this.$router.push('/selectmore')
           break;
         case 4:
           this.$router.push('/form')
           break;
         default:
-          
+
       }
-      
+
     }
   }
 }

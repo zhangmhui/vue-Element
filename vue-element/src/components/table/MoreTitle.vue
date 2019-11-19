@@ -1,38 +1,26 @@
 <template>
-<div>
-    <center>当数据量动态变化时，可以通过设置max-height属性为 Table 设置一个最大高度</center>
-     <el-table :data="tableData" style="width: 100%" max-height="250">
-    <el-table-column fixed prop="date" label="日期" width="150">
+  <el-table :data="tableData" style="width: 100%">
+    <el-table-column prop="date" label="日期" width="160" align="center">
     </el-table-column>
-    <el-table-column prop="name" label="姓名" width="120">
-    </el-table-column>
-    <el-table-column prop="province" label="省份" width="120">
-    </el-table-column>
-    <el-table-column prop="city" label="市区" width="120">
-    </el-table-column>
-    <el-table-column prop="address" label="地址" width="300">
-    </el-table-column>
-    <el-table-column prop="zip" label="邮编" width="120">
-    </el-table-column>
-    <el-table-column fixed="right" label="操作" width="120">
-      <template slot-scope="scope">
-        <el-button @click.native.prevent="deleteRow(scope.$index, tableData)" type="text" size="small">
-          移除
-        </el-button>
-      </template>
+    <el-table-column label="配送信息" align="center">
+      <el-table-column prop="name" label="姓名" align="center">
+      </el-table-column>
+      <el-table-column label="地址" align="center">
+        <el-table-column prop="province" label="省份"  align="center">
+        </el-table-column>
+        <el-table-column prop="city" label="市区"  align="center">
+        </el-table-column>
+        <el-table-column prop="address" label="地址" align="center" >
+        </el-table-column>
+        <el-table-column prop="zip" label="邮编" align="center">
+        </el-table-column>
+      </el-table-column>
     </el-table-column>
   </el-table>
-</div>
- 
 </template>
 
 <script>
 export default {
-  methods: {
-    deleteRow(index, rows) {
-      rows.splice(index, 1);
-    }
-  },
   data() {
     return {
       tableData: [{
