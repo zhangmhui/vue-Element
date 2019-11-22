@@ -59,7 +59,7 @@
           </el-submenu>
           <el-menu-item index="4">
             <i class="el-icon-setting"></i>
-            <span slot="title">form</span>
+            <el-menu-item index="4-1">验证表单</el-menu-item>
           </el-menu-item>
         </el-menu>
       </el-aside>
@@ -89,10 +89,10 @@ export default {
     handleSelect(key, keyPath) {
       console.log(key, keyPath);
       switch (key) {
-        case 1:
+        case '1':
           this.$router.push('/chart')
           break;
-        case 1 - 3:
+        case "1-3":
           this.$router.push('/transfer')
           break;
         case 2:
@@ -119,7 +119,7 @@ export default {
         case '3-3-3':
           this.$router.push('/selectmore')
           break;
-        case 4:
+        case "4-1":
           this.$router.push('/form')
           break;
         default:
